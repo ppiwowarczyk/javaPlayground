@@ -1,7 +1,11 @@
-package instance;
+package players;
 
 import javaAnotation.Java16_PatternMatching;
 import javaAnotation.Java17_PatternMatchingSwitch;
+import players.models.Forward;
+import players.models.GoalKeeper;
+import players.models.KeyPlayerStat;
+import players.models.Player;
 
 import java.util.List;
 

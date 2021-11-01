@@ -1,4 +1,4 @@
-package instance;
+package players.models;
 
 import lombok.Getter;
 import lombok.Setter;

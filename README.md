@@ -58,7 +58,7 @@ Done with beer stats application for one of the POJOs (the 2nd one kept intentio
 
 #### Sealed Classes
 
-Done with TeamMember in instance demo to restrict implementation for real players not other team members like coach.
+Done with TeamMember in players demo to restrict implementation for real players not other team members like coach.
 
 ### Java 16
 

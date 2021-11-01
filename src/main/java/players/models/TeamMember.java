@@ -1,4 +1,4 @@
-package instance;
+package players.models;
 
 import javaAnotation.Java15_SealedClasses;
 

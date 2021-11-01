@@ -31,3 +31,5 @@ hs_err_pid*
 /shelf/
 /workspace.xml
 /jarRepositories.xml
+/.idea/jarRepositories.xml
+/.idea/workspace.xml

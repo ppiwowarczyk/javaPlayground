@@ -1,4 +1,4 @@
-package instance;
+package players;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

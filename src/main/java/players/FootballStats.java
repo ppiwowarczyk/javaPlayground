@@ -1,4 +1,7 @@
-package instance;
+package players;
+
+import players.models.KeyPlayerStat;
+import players.models.Player;
 
 import java.util.List;
 

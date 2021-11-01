@@ -1,5 +1,8 @@
-package instance;
+package players;
 
+import players.models.Forward;
+import players.models.GoalKeeper;
+import players.models.Player;
 import org.junit.Test;
 
 import java.util.List;
