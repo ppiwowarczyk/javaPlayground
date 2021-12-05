@@ -4,6 +4,7 @@ import org.junit.Test;
 
 import static mockTool.MockProvider.ONLY_RECORDED_MOCK_ID;
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.AssertionsForClassTypes.assertThatThrownBy;
 
 public class MockToolImplTest {
 
@@ -20,8 +21,9 @@ public class MockToolImplTest {
         assertThat(mock).isNotNull();
     }
 
-    @Test(expected = MockNotExistsException.class)
+    @Test
     public void shouldThrowExceptionForNullId() {
+
         // given
         RequestId requestId = null;
 
@@ -29,16 +31,21 @@ public class MockToolImplTest {
         MockTool mockTool = new MockToolImpl(new MockProvider());
 
         // then
-        String mock = mockTool.mock(requestId);
+        assertThatThrownBy(() ->  mockTool.mock(requestId))
+                .isInstanceOf(MockNotExistsException.class);
     }
 
-    @Test(expected = MockNotExistsException.class)
+    @Test
     public void shouldThrowExceptionForNotRecordedMock() {
+
         // given
         RequestId requestId = new RequestId("not_existing_id");
 
         // when
         MockTool mockTool = new MockToolImpl(new MockProvider());
-        mockTool.mock(requestId);
+
+        // then
+        assertThatThrownBy(() ->  mockTool.mock(requestId))
+                .isInstanceOf(MockNotExistsException.class);
     }
 }
