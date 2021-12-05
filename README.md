@@ -12,8 +12,6 @@ There is also annotations refers to particular functionalities for examples :
 
 ### What still to cover
 
-* Blocks
-
 ### Java 9
 
 #### Default interfaces with private methods
@@ -47,6 +45,10 @@ Done inside NilaUntappdController.
 ##### Switch statements
 
 Covered by craft beer grouper example with types of beers.
+
+##### Text Blocks
+
+Covered by quite dummy example of mocking server (Wiremock inspired:) as great example of text block usage would be text for json.
 
 ### Java 14
 
