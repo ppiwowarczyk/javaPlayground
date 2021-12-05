@@ -23,8 +23,7 @@ public class MockProvider implements Function<RequestId, String> {
     private String getRecordedJson() {
 
         return """
-                {
-                  "user": {
+                   {
                     "uid": 1,
                     "id": 1,
                     "user_name": "gregavola",
@@ -164,7 +163,6 @@ public class MockProvider implements Function<RequestId, String> {
                       "email_address": "User Email Here"
                     }
                   }
-                }
                 """;
     }
 }

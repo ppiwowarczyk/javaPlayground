@@ -1,15 +1,22 @@
 package mockTool;
 
+import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import javaAnotation.Java14_Records;
 import org.junit.Test;
+
+import java.io.IOException;
 
 import static mockTool.MockProvider.ONLY_RECORDED_MOCK_ID;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThatThrownBy;
 
+@Java14_Records
 public class MockToolImplTest {
 
     @Test
-    public void shouldReturnMock() {
+    public void shouldReturnMock() throws IOException {
+
         // given
         RequestId requestId = new RequestId(ONLY_RECORDED_MOCK_ID);
 
@@ -19,6 +26,11 @@ public class MockToolImplTest {
 
         // then
         assertThat(mock).isNotNull();
+
+        UserRecord user = new ObjectMapperSupplier().get().readValue(mock, UserRecord.class);
+        assertThat(user).isNotNull();
+        assertThat(user.id()).isEqualTo(1);
+        assertThat(user.user_name()).isEqualTo("gregavola");
     }
 
     @Test

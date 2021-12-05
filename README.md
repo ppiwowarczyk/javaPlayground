@@ -54,7 +54,8 @@ Covered by quite dummy example of mocking server (Wiremock inspired:) as great e
 
 #### Records
 
-Done with beer stats application for one of the POJOs (the 2nd one kept intentionally using Lombok)
+Done with beer stats application for one of the POJOs (the 2nd one kept intentionally using Lombok).
+There is also mocking server test (mainly for text blocks) with ObjectMapper to POJO via records.
 
 ### Java 15
 
