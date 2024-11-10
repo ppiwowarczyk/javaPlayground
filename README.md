@@ -79,3 +79,5 @@ This is a concept of some general widget data providing key stats per position o
 ### Java 22
 
 #### Constructor statement before super
+
+Done with extending players example with stats validation passing while creating specific type of player and before constructor execution per each type of player.
