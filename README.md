@@ -1,4 +1,4 @@
-# Java 9-17 playground
+# Java 9-23 playground
 
 The goal of this project is test new features of Java across releases implemented in very simple examples.
 Examples are simple but I would like to add it in some real apps problems as I not a fan o Foo examples. :)
@@ -75,3 +75,7 @@ Done by players example in Java 15 as we are using type check variable.
 
 Done with football stats with concept of switch providing key stat of particular position.
 This is a concept of some general widget data providing key stats per position on some general view.
+
+### Java 22
+
+#### Constructor statement before super
