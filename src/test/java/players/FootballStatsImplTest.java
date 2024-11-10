@@ -53,4 +53,20 @@ public class FootballStatsImplTest {
         assertThat(goalKeeperResult.keyStateName()).isEqualTo("clean sheets");
         assertThat(goalKeeperResult.statValue()).isEqualTo(cleanSheets);
     }
+
+    @Test(expected = RuntimeException.class)
+    public void shouldForwardRaiseExceptionIfNegativeStatPassed(){
+
+        // given
+        // then
+        Forward forward = new Forward(-2, -1);
+    }
+
+    @Test(expected = RuntimeException.class)
+    public void shouldGoalKeeperRaiseExceptionIfNegativeStatPassed(){
+
+        // given
+        // then
+        GoalKeeper goalKeeper = new GoalKeeper(-2, -1, -2, 1);
+    }
 }
